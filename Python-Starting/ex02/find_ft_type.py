@@ -1,11 +1,14 @@
 def all_thing_is_obj(obj: any):
-    if isinstance(obj, object):
-        if type(obj).__name__ == "str":
-            print(f"{obj} is in the kitchen : {type(obj)}")
-        elif type(obj).__name__ == "int":
-            print("Type not found")
-        else: 
-            print(f"{type(obj).__name__.capitalize()} : {type(obj)}")
+    if type(obj) is list:
+        print(f"List : {type(obj)}")
+    elif type(obj) is tuple:
+        print(f"Tuple : {type(obj)}")
+    elif type(obj) is set:
+        print(f"Set : {type(obj)}")
+    elif type(obj) is dict:
+        print(f"Dict : {type(obj)}")
+    elif type(obj) is str:
+        print(f"{obj} is in the kitchen : {type(obj)}")
     else:
         print("Type not found")
     return 42
