@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: ft-package
+Version: 0.0.1
+Summary: A sample test package
+Home-page: https://github.com/peacover/1337_PythonForDataScience/tree/main/Python-Starting/ex09/
+Author: Peacover
+Author-email: yer_raki@student.1337.ma
+License: MIT
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
