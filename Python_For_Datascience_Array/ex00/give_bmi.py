@@ -3,10 +3,10 @@ def ErrorHandlingBMI(height, weight):
         return print("ARG IS NOT A LIST!")
     else:
         for item in height:
-            if not (isinstance(item, int) |  isinstance(item, float)):
+            if not (isinstance(item, int) | isinstance(item, float)):
                 return print("HEIGHT LIST NOT VALID!")
         for item in weight:
-            if not (isinstance(item, int) |  isinstance(item, float)):
+            if not (isinstance(item, int) | isinstance(item, float)):
                 return print("WEIGHT LIST NOT VALID!")
         if len(height) != len(weight):
             return print("THE LIST ARE NOT THE SAME SIZE!")
