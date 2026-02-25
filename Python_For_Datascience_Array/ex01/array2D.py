@@ -22,7 +22,6 @@ def slice_me(family: list, start: int, end: int):
     print(f"My shape is : ({len_list}, {len_item})")
     print(f"My new shape is : ({len(new_family)}, {len_item})")
     return (new_family)
-        
 
 
 # family = [[1.80, 78.4],

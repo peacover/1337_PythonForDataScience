@@ -1,5 +1,4 @@
 import imageio.v2 as iio
-import matplotlib.pyplot as plt
 
 
 def ft_load(path: str):
