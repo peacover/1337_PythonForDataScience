@@ -1,4 +1,9 @@
 def slice_me(family: list, start: int, end: int):
+    """Slice a 2D list and print the old and new shapes.
+
+    Takes a 2D list and returns the sliced portion from start to end.
+    Prints the original and new shapes of the array.
+    """
     if not isinstance(family, list):
         return print("FIRST ARG IS NOT A LIST!")
     elif not isinstance(start, int):

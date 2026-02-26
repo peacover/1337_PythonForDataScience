@@ -4,6 +4,11 @@ import matplotlib.pyplot as plt
 
 def ft_zoom(path: str, start_x: int, start_y: int, width: int, height: int,
             nb_channels: int, pixel_content: str):
+    """Zoom into a region of an image and display it.
+
+    Loads the image, slices the specified region, prints the new shape,
+    and displays the zoomed portion using matplotlib.
+    """
     try:
         img = ft_load(path)
         print(img)

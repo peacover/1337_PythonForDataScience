@@ -4,6 +4,11 @@ import numpy as np
 
 
 def ft_transpose(img):
+    """Manually transpose a 2D image array.
+
+    Swaps rows and columns of the image and returns the
+    transposed result as a numpy array.
+    """
     rows, cols = len(img), len(img[0])
     new_img = [[0] * rows for _ in range(cols)]
     for i in range(rows):
@@ -17,6 +22,11 @@ def ft_transpose(img):
 
 
 def rotate(path: str):
+    """Zoom into an image region, transpose it, and display the result.
+
+    Loads and zooms into a predefined region of the image, applies a
+    manual transpose, and displays the rotated image using matplotlib.
+    """
     try:
         START_X = 100
         START_Y = 450
@@ -25,8 +35,8 @@ def rotate(path: str):
         NB_CHANNELS = 1
         PIXEL_CONTENT = "grey"
         img = ft_zoom(path, START_X, START_Y, WIDTH,
-                      HEIGHT, NB_CHANNELS, PIXEL_CONTENT)
-
+                      HEIGHT, NB_CHANNELS)
+        # new_img = img.transpose().reshape(400, 400)
         new_img = ft_transpose(img)
         print(f"New shape after Transpose: {new_img.shape}")
         print(new_img)

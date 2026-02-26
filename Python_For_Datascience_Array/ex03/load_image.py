@@ -2,6 +2,10 @@ import matplotlib.image as mpimg
 
 
 def ft_load(path: str):
+    """Load an image from the given path and print its shape.
+
+    Returns the image as a numpy array, or None on error.
+    """
     try:
         img = mpimg.imread(path)
 

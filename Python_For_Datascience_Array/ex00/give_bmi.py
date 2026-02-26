@@ -1,4 +1,10 @@
 def ErrorHandlingBMI(height, weight):
+    """Validate inputs for the give_bmi function.
+
+    Checks that height and weight are lists of int/float
+    with the same length.
+    Returns True if valid, otherwise prints an error message.
+    """
     if not isinstance(height, list):
         return print("ARG IS NOT A LIST!")
     else:
@@ -14,6 +20,11 @@ def ErrorHandlingBMI(height, weight):
 
 
 def ErrorHandlingApplyLimit(bmi, limit):
+    """Validate inputs for the apply_limit function.
+
+    Checks that bmi is a list of int/float and limit is an int.
+    Returns True if valid, otherwise prints an error message.
+    """
     if not isinstance(bmi, list):
         return print("ARG IS NOT A LIST!")
     elif not isinstance(limit, int):
@@ -26,6 +37,11 @@ def ErrorHandlingApplyLimit(bmi, limit):
 
 
 def give_bmi(height: list[int | float], weight: list[int | float]):
+    """Calculate BMI from height and weight lists.
+
+    BMI = weight (kg) / (height (m) ^ 2).
+    Returns a list of BMI values.
+    """
     # BMI = weight (kg) / (height (m) ^ 2)
     if ErrorHandlingBMI(height, weight):
         return [weight[index] / (height[index] ** 2)
@@ -33,6 +49,10 @@ def give_bmi(height: list[int | float], weight: list[int | float]):
 
 
 def apply_limit(bmi: list[int | float], limit: int):
+    """Apply a BMI limit and return a list of booleans.
+
+    Returns True for each BMI value above the limit, False otherwise.
+    """
     if ErrorHandlingApplyLimit:
         return [True if item > limit else False for item in bmi]
 

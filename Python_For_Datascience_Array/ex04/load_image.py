@@ -2,6 +2,10 @@ import matplotlib.image as mpimg
 
 
 def ft_load(path: str):
+    """Load an image from the given path.
+
+    Returns the image as a numpy array, or None on error.
+    """
     try:
         img = mpimg.imread(path)
         return img
@@ -9,7 +13,13 @@ def ft_load(path: str):
         return print(e)
 
 
-def ft_zoom(path: str, start_x: int, start_y: int, width: int, height: int, nb_channels: int, pixel_content: str):
+def ft_zoom(path: str, start_x: int, start_y: int, width: int,
+            height: int, nb_channels: int):
+    """Zoom into a region of an image and return the cropped portion.
+
+    Loads the image, slices the specified region based on coordinates
+    and channel count, prints the shape, and returns the zoomed array.
+    """
     try:
         img = ft_load(path)
 
